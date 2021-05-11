@@ -1,0 +1,12 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --red-clr:#ff0000;
+    --dark-orange-clr:#ff7400;
+    --orange-clr:#ff9a3d;
+    --light-orange-clr:#ffcd9e;
+    --bright-orange-clr:#ffe9de;
+}
