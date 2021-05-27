@@ -186,14 +186,7 @@ border: none;
 outline: none;
 visibility: visible;
 }
-.remove-btn{
-    /* cursor: pointer;
-color: #000;
-border: none;
-outline: none;
-background: var(--light-orange-clr);
-visibility: hidden; */
-}
+
 
 #product-item{
     padding: 1.3em;
