@@ -92,5 +92,10 @@ const navOpen = () => {
 navToggle.addEventListener("click", navOpen)
 
 
-
-
+const cartBody = document.querySelector(".cart");
+const model = document.querySelector(".modal");
+const showModel = () => {
+    model.style.display = "block";
+    // console.log("clicked")
+}
+cartBody.addEventListener("click", showModel);
