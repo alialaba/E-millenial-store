@@ -218,9 +218,6 @@ visibility: visible;
 #product-content__img{
     position: relative;
      cursor: pointer;
-    
-    /* float: left; */
- /* margin-right: 10px; */
 }
 #product-content__img span{
 position: absolute;
@@ -302,7 +299,7 @@ visibility: hidden;
 }
 .model-content{
     width: 50%;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: #fff;
     padding: 2em;
       border-radius: 5px;
 }
@@ -310,19 +307,19 @@ visibility: hidden;
     border-collapse: collapse;
     width: 100%;
 }
-#item td, #item th{
+.item-list td, .item-list th{
     padding: 8px;
     text-align: left;
-    color: #fff;
+    color: #000;
 }
 .modal .user-section input{
     width: 100%;
     max-width: 600px;
     padding: 12px;
-    margin: 1em 0 1em ;
+    margin: 1em 0 .5em ;
     outline: none;
     border-radius: 5px;
-    border: none;
+    border: 1px solid #000;
 }
 .modal .action-section{
     text-align: right;
@@ -332,7 +329,25 @@ visibility: hidden;
     font-weight: 900;
     text-align: center;
     line-height: 30px;
-    color: #fff;
+    color: #000;
+}
+/* styling for form validation */
+.field small{
+    visibility: hidden;
+}
+.field.error input {
+    border: 1px solid red;
+}
+.field.error small{
+    color: red;
+    visibility: visible;
+}
+.field.success input{
+    border: 1px solid green;
+}
+.field.success small{
+    visibility: hidden;
+    color: green;
 }
 @media(min-width:768px){
     .intro__content{

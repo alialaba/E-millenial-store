@@ -99,3 +99,84 @@ const showModel = () => {
     // console.log("clicked")
 }
 cartBody.addEventListener("click", showModel);
+
+
+const itemList = document.querySelector(".item-list");
+const addItem = () => {
+    // const textHtml = `
+    // <tr>
+    //                     <td>1</td>
+    //                     <td>Alaba</td>
+    //                     <td>N1000</td>
+    //                     <td>
+    //                         <a href="#" class="btn btn-counter">+</a>
+    //                         <span>1</span>
+    //                         <a href="#" class="btn btn-counter">-</a>
+    //                     </td>
+    //                     <td>
+    //                         <a href="#" class="btn btn-remove">Remove</a>
+
+    //                     </td>
+    //                 </tr>   
+    // `;
+
+    // let postion = 'beforeend';
+    // item.insertAdjacentHTML(postion, textHtml);
+    console.log(itemList)
+}
+addItem()
+
+//form validations
+const form = document.querySelector("form");
+let userName = document.getElementById("name");
+let userEmail = document.getElementById("email");
+let userPhone = document.getElementById("phone");
+const validateForm = () => {
+
+    //inputted value variables
+    let userNameValue = userName.value.trim();
+    let userEmailValue = userEmail.value.trim();
+    let userPhoneValue = userPhone.value.trim();
+    //checking name validations on input
+    if (userNameValue === " ") {
+        setError(userName, "Field cannot be empty")
+    } else {
+        setSuccess(userName);
+    }
+
+    //checking email validations on input
+    if (userEmailValue === " ") {
+        setError(userEmail, "Field cannot be empty")
+    } else if (!userEmailValue.includes("@")) {
+        setError(userEmail, "Email is not valid");
+    } else {
+        setSuccess(userEmail);
+    }
+    //checking phone number validations on input
+
+    if (userPhoneValue === "") {
+        setError(userPhone, "Field cannot be empty");
+    } else if (isNaN(userPhoneValue)) {
+        setError(userPhone, "Must be a number");
+    } else if (userPhoneValue.length < 11) {
+        setError(userPhone, "Password should be 8 characters long");
+    } else {
+        setSuccess(userPhone);
+    }
+
+
+}
+form.addEventListener("input", validateForm)
+
+
+const setError = (input, message) => {
+    let fieldInput = input.parentElement;
+    let small = fieldInput.querySelector("small");
+    small.innerText = message;
+
+    fieldInput.className = "field error";
+}
+const setSuccess = (input) => {
+    let fieldInput = input.parentElement;
+    fieldInput.className = "field sucess";
+}

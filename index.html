@@ -87,42 +87,30 @@
         <div class="container model-content">
             <div class="item-section">
                 <table id="item">
-                    <tr>
-                        <th>S/N</th>
-                        <th>Name</th>
-                        <th> Price</th>
-                        <th>Quanity</th>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Alaba</td>
-                        <td>N1000</td>
-                        <td>
-                            <a href="#" class="btn btn-counter">+</a>
-                            <span>1</span>
-                            <a href="#" class="btn btn-counter">-</a>
-                        </td>
-                        <td>
-                            <a href="#" class="btn btn-remove">Remove</a>
+                    <tbody class="item-list">
+                        <tr>
+                            <th>S/N</th>
+                            <th>Name</th>
+                            <th> Price</th>
+                            <th>Quanity</th>
+                        </tr>
 
-                        </td>
-                    </tr>
-
+                    </tbody>
                 </table>
             </div>
             <div class="user-section">
                 <form action="">
                     <div class="field">
-                        <input type="text" placeholder="Enter Your name">
-                        <span></span>
+                        <input type="text" placeholder="Enter Your name" id="name">
+                        <small>Error Message</small>
                     </div>
                     <div class="field">
-                        <input type="email" placeholder="Enter Your Email">
-                        <span></span>
+                        <input type="email" placeholder="Enter Your Email" id="email">
+                        <small>Error Message</small>
                     </div>
                     <div class="field">
-                        <input type="phone" placeholder="Enter Your Phone Number">
-                        <span></span>
+                        <input type="phone" placeholder="Enter Your Phone Number" id="phone">
+                        <small>Error Message</small>
                     </div>
                 </form>
             </div>
